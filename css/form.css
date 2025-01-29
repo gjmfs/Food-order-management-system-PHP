@@ -1,0 +1,19 @@
+.form {
+  width: max-content;
+}
+.form .col {
+  width: 30vw;
+  height: fit-content;
+  background-color: rgb(53, 53, 53);
+  margin: 50px;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid aliceblue;
+}
+.form label {
+  margin-bottom: 10px;
+}
+.form button {
+  margin-top: 30px;
+}
