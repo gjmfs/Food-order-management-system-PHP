@@ -2,8 +2,8 @@
   width: max-content;
 }
 .form .col {
-  width: 30vw;
   height: fit-content;
+
   background-color: rgb(53, 53, 53);
   margin: 50px;
   color: aliceblue;

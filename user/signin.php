@@ -23,6 +23,7 @@ if(isset($_POST['signin'])) {
             $stmt->bind_param("ssss", $username, $hashedPassword, $contact, $address); 
             $stmt->execute();
             echo "User created successfully";
+            
         } else {
             echo "User already exists."; 
         }

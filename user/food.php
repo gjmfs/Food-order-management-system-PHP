@@ -38,8 +38,10 @@ if(!isset($_SESSION['user_id'])){
 
             // Construct the SQL query to search across multiple columns
             $sql = "SELECT * FROM food 
-                    WHERE name LIKE '%$search_term%' 
-                    OR price LIKE '%$search_term%'";
+                    WHERE (name LIKE '%$search_term%' 
+                    OR price LIKE '%$search_term%')
+                    AND quantity > 0"
+                    ;
 
             // Execute the query
             $result = $conn->query($sql);
@@ -61,6 +63,7 @@ if(!isset($_SESSION['user_id'])){
                                             <input type="hidden" name="food_name" value="<?php echo $row["name"]; ?>"> 
                                             <input type="hidden" name="food_quantity" value="<?php echo $row["quantity"]?>">
                                             <input type="hidden" name="food_price" value="<?php echo $row["price"]?>">
+                                            <input type="hidden" name="id" value="<?php echo $row["id"]?>">
                                             <input type="number" name="food_order_quantity" class="form-control mt-2 mb-2">
                                             <button type="submit" class="btn btn-success">order</button>
                                         </form>

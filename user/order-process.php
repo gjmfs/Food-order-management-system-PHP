@@ -4,6 +4,7 @@ include '../config.php';
 
 // Get data from the form
 $name = $_POST['food_name'];
+$id = $_POST['id'];
 $quantity = $_POST['food_quantity'];
 $price = $_POST['food_price'];
 $food_order_quantity = $_POST['food_order_quantity'];
@@ -36,8 +37,8 @@ if ($food_order_quantity <= $quantity) {
         $new_quantity = $quantity - $food_order_quantity;
 
         // Prepare and execute the update statement
-        $update_stmt = mysqli_prepare($conn, "UPDATE food SET quantity = ? WHERE name = ?"); 
-        mysqli_stmt_bind_param($update_stmt, "is", $new_quantity, $name);
+        $update_stmt = mysqli_prepare($conn, "UPDATE food SET quantity = ? WHERE id = ?"); 
+        mysqli_stmt_bind_param($update_stmt, "is", $new_quantity, $id);
         mysqli_stmt_execute($update_stmt);
 
         echo "<script>alert('order successfull');</script>";

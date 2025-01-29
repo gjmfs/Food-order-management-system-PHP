@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="../css/nav.css">
 <nav>
       <a href="./home.php">
-        <img id="logo" src='../assets/logo.png' alt="logo" />
+        FOMS
       </a>
       <input type="checkbox" id="sidebar-active" />
       <label for="sidebar-active" class="open-sidebar-button">
