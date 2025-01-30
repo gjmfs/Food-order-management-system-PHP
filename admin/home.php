@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['user_id'])){
+if(!isset($_SESSION['admin_id'])){
   die ("You are not logged in ");
 }
 ?>
@@ -22,8 +22,8 @@ if(!isset($_SESSION['user_id'])){
     <div class=" container">
       <div class="row row-cols-1">
         <a href="./food.php" class="col">Foods</a>
-        <a href="./history.php" class="col">History</a>
-        <a href="./contact.php" class="col">Contact</a>
+        <a href="./orders.php" class="col">Orders</a>
+        <a href="./contact.php" class="col">Messages</a>
       </div>
     </div>
   </body>
