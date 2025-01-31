@@ -14,13 +14,14 @@ if ($food_order_quantity <= $quantity) {
     $user_id = $_SESSION['user_id']; 
 
     // Get user address using prepared statement
-    $stmt = mysqli_prepare($conn, "SELECT address FROM user WHERE id = ?");
+    $stmt = mysqli_prepare($conn, "SELECT address,contact_no FROM user WHERE id = ?");
     mysqli_stmt_bind_param($stmt, "i", $user_id); 
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt); 
     if ($result) {
         $row = mysqli_fetch_assoc($result); 
         $address = $row['address']; 
+        $contact_no=$row['contact_no'];
     } else {
         echo "Error: " . mysqli_stmt_error($stmt); 
         exit(); 
@@ -28,8 +29,8 @@ if ($food_order_quantity <= $quantity) {
     mysqli_stmt_close($stmt); 
 
     // Insert pre-order data into the database
-    $sql = "INSERT INTO `order` (food_name, food_quantity, food_price, user_id) 
-            VALUES ('$name', '$food_order_quantity', '$price', '$user_id')";
+    $sql = "INSERT INTO `order` (food_name, food_quantity, food_price, user_id ,address,contact_no) 
+            VALUES ('$name', '$food_order_quantity', '$price', '$user_id','$address','$contact_no')";
 
     if ($conn->query($sql) === TRUE) {
 

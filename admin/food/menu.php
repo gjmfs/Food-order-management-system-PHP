@@ -11,9 +11,9 @@ if(!isset($_SESSION['admin_id'])){
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Home</title>
-    <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.css" />
-    <script src="../css/bootstrap/dist/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../css/card.css">
+    <link rel="stylesheet" href="../../css/bootstrap/dist/css/bootstrap.css" />
+    <script src="../../css/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../css/card.css">
     
   </head>
   
@@ -21,9 +21,8 @@ if(!isset($_SESSION['admin_id'])){
   <?php include "./nav.php";?> 
     <div class=" container">
       <div class="row row-cols-1">
-        <a href="./food/menu.php" class="col">Foods</a>
-        <a href="./history.php" class="col">Orders</a>
-        <a href="./contact.php" class="col">Messages</a>
+        <a href="./add.php" class="col">Add</a>
+        <a href="./view.php" class="col">View</a>
       </div>
     </div>
   </body>

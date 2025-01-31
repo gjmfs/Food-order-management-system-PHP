@@ -27,6 +27,8 @@ if(!isset($_SESSION['user_id'])){
                     <th scope="col">User ID</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact No</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,6 +53,8 @@ if(!isset($_SESSION['user_id'])){
                             <td><?php echo $row['food_quantity']; ?></td>
                             <td><?php echo $row['food_price']; ?></td> 
                             <td><?php echo $row['order_date']; ?></td> 
+                            <td><?php echo $row['address']; ?></td> 
+                            <td><?php echo $row['contact_no']; ?></td> 
                         </tr>
                         <?php
                     }

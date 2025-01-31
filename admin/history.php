@@ -27,6 +27,9 @@ if(!isset($_SESSION['admin_id'])){
                     <th scope="col">User ID</th>
                     <th scope="col">Quantity</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Contact No</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,7 +37,7 @@ if(!isset($_SESSION['admin_id'])){
                 include "../config.php";
 
 
-                $sql = "select * from order";
+                $sql = "select * from `order`";
                 
                 $result=$conn->query($sql);
 
@@ -49,6 +52,8 @@ if(!isset($_SESSION['admin_id'])){
                             <td><?php echo $row['food_quantity']; ?></td>
                             <td><?php echo $row['food_price']; ?></td> 
                             <td><?php echo $row['order_date']; ?></td> 
+                            <td><?php echo $row['address']; ?></td> 
+                            <td><?php echo $row['contact_no']; ?></td> 
                         </tr>
                         <?php
                     }
