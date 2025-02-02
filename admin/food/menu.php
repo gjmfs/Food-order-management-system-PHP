@@ -10,7 +10,7 @@ if(!isset($_SESSION['admin_id'])){
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Home</title>
+    <title>Food Menu</title>
     <link rel="stylesheet" href="../../css/bootstrap/dist/css/bootstrap.css" />
     <script src="../../css/bootstrap/dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../../css/card.css">

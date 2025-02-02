@@ -3,6 +3,6 @@
     "bootstrap": "^5.3.3"
   },
   "scripts": {
-    "php": "php -S localhost:3000"
+    "php": "php -S localhost:3001"
   }
 }

@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Books</title>
+    <title>Search Foods</title>
     <link rel="stylesheet" href="../css/bootstrap/dist/css/bootstrap.css">
     <script src="../css/bootstrap/dist/js/bootstrap.js"></script>
     
@@ -18,7 +18,7 @@ if(!isset($_SESSION['user_id'])){
 <?php include "./nav.php";?> 
     <div class="container">
         <form action="./food.php" method="POST"> 
-            <h2 class="text-center mt-3 mb-3"> Search Books</h2>
+            <h2 class="text-center mt-3 mb-3"> Search Foods</h2>
             <div class="mb-3">
                 <label class="form-label">Search Term:</label>
                 <input type="text" class="form-control" name="search_term" required>
@@ -56,9 +56,10 @@ if(!isset($_SESSION['user_id'])){
                             <div class="col mt-3">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title"><b>Name: </b><?php echo $row["name"]; ?></h5>
-                                        <p class="card-text"><b>Quantity:</b> <?php echo $row["quantity"]; ?></p>
-                                        <p class="card-text"><b>Price:</b> <?php echo $row["price"]; ?></p>
+                                        <img class="img-fluid" src="<?php echo "../../assets/foods/".$row["image"]; ?>" alt=<?php echo $row["image"]; ?>>
+                                        <h5 class="card-title"><b></b><?php echo $row["name"]; ?></h5>
+                                        <p class="card-text"><b>Quantity: </b> <?php echo $row["quantity"]; ?></p>
+                                        <p class="card-text"><b>Price:</b> LKR <?php echo $row["price"]; ?></p>
                                         <form action="./order-process.php" method="POST">
                                             <input type="hidden" name="food_name" value="<?php echo $row["name"]; ?>"> 
                                             <input type="hidden" name="food_quantity" value="<?php echo $row["quantity"]?>">

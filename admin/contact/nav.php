@@ -14,9 +14,9 @@
           <img class="icons" src='../../assets/nav/close.svg' />
         </label>
         
-        <a href="./menu.php">Foods</a>
+        <a href="../food/menu.php">Foods</a>
         <a href="../history.php">Order History</a>
-        <a href="../contact/view.php">Contact</a>
+        <a href="./view.php">Contact</a>
         <a href="../users/view.php">Users</a>
         <a href="../logout.php">
           <img class='logout' src="../../assets/nav/logout.svg" alt="logout">
